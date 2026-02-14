@@ -1,0 +1,12 @@
+---
+ - name  : This is simple play to understand debug module
+   hosts : localhost
+   gather_facts : false
+   tasks :
+   - name : Ansible msg with msg parameter of debug module
+     debug :
+       msg :
+        - "Wellcome to Ansible-Playbook"
+        - "This are the basic concept"
+
+
