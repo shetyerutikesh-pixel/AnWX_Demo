@@ -1,1 +1,14 @@
+---
+ - name  : This is simple play to understand debug module
+   hosts : all
+   gather_facts : false
+   tasks :
+   - name : testing
+     win_ping:
+     
+   - name : Ansible msg with msg parameter of debug module
+     debug :
+       msg :
+        - "Wellcome to Ansible-Playbook"
+        - "This are the basic concept"
 
