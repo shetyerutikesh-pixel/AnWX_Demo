@@ -1,6 +1,6 @@
 #!/usr/bin/ansible-playbook
  - name : Installing httpd package 
-   hosts : web_server
+   hosts : "{{deployment_host}}"
    tasks:
    - name : Installing starting for httpd
      become : yes
