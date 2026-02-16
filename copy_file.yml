@@ -1,6 +1,6 @@
 ---
  - name: copy file master node to manage node
-   hosts: web_server
+   hosts: "{{deployment_host}}"
    gather_facts : false
    tasks:
    - name: copy var file
