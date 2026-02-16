@@ -1,0 +1,5 @@
+---
+ - hosts : all
+   tasks : 
+    - name : checking manage node
+      ping :  

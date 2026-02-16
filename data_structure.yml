@@ -1,0 +1,20 @@
+---
+ - name: Data structure or data collection
+   hosts: localhost
+   vars:
+     #os: ["Linux", "MAC", "WINDOWS"]
+    #os: 
+    # - "Linux"
+    # - "MAC"
+    # - "Windows"
+
+    module : {'Linux' :'apt', 'CentOs' : 'yum'}
+    module1 :
+     'Linux' : 'apt'
+     'CentOs' : 'yum'
+   gather_facts: false
+   tasks:
+    - debug:
+        var: module
+
+  

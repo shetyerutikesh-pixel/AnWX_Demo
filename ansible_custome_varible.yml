@@ -1,0 +1,20 @@
+#!/usr/bin/ansible-playbook
+  - name : usage of ansible custome varible
+    hosts : localhost
+    vars :
+     name : Rutikesh Shetye
+     age : 24
+     location :  Santacruz
+     degree_marks : 75.31
+     value : yes
+    gather_facts : false
+    tasks : 
+    - name : display custome varible
+      debug :
+       msg : 
+        - "my name is : {{name}} and type : {{name | type_debug}} "
+        - "I live in {{location}} and type : {{location | type_debug}}"
+        - "my age is {{age}} and and type : {{age | type_debug}}"
+        - "my percentage is {{degree_marks}} and type : {{degree_marks | type_debug}}"
+        - "example of boolean value is {{value}} and type : {{value | type_debug}}"
+

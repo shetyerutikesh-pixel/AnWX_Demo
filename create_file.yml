@@ -1,0 +1,10 @@
+---
+ - name : create empty file
+   hosts :  all
+   gather_facts : false 
+   tasks :
+   - name : creating empty file using file_module
+     file : 
+       path: demo.py 
+       state: touch 
+       mode: 755 

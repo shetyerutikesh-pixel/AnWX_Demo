@@ -1,0 +1,9 @@
+#!/usr/bin/ansible-playbook
+ - name : Installing httpd package 
+   hosts : web_server
+   tasks:
+   - name : Installing starting for httpd
+     become : yes
+     yum : 
+      name: httpd 
+      state: present

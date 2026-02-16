@@ -1,0 +1,8 @@
+#!/usr/bin/ansible-playbook
+
+ - name: copy-file-playbook 
+   hosts: localhost
+   tasks :
+   - name: create java file
+     file : path=test1.java state =touch 
+   

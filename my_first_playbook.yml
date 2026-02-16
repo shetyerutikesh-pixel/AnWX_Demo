@@ -1,0 +1,16 @@
+---
+ - name : create file task
+   hosts : 192.168.0.102
+   tasks : 
+    - name : creating file using file module
+      file :
+       path : my_first_File1.java
+       state : touch
+       mode : 0755
+
+
+    - name : fetching file from manage node
+      fetch : 
+       src : /home/ansadmin/my_first_File1.java
+       dest : /home/ansadmin/{{inventory_hostname}}
+       flat: yes 

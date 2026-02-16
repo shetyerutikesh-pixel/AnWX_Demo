@@ -1,0 +1,20 @@
+#!/usr/bin/ansible-playbook
+  - name : usage of ansible custome varible
+    hosts : web_server
+   
+    tasks : 
+    - name : start httpd
+      service:
+       name : httpd
+       state : started
+ 
+    - name: oprn port for httpd services
+      firewalld:
+       service : http
+       permanent : true
+       state : enabled
+
+    - name : Restart firewalld service to load firewall change
+      service:
+        name : firewalld
+        state : reloaded 
