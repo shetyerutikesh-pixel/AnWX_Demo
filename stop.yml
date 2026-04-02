@@ -1,7 +1,6 @@
 ---
 - name: Stop service on Linux
   hosts: "{{ deployment_host }}"
-  become: yes
   gather_facts: no
 
   vars:
