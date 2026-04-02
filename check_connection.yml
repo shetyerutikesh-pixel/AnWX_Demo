@@ -1,5 +1,8 @@
 ---
- - hosts : all
-   tasks : 
-    - name : checking manage node
-      ping :  
+- name: Check managed node
+  hosts: "{{ deployment_host }}"
+  gather_facts: no
+
+  tasks:
+    - name: Ping managed node
+      ping:
